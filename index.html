@@ -6,10 +6,14 @@
 		<title>portifólio do Matheus</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="./css/main.css" />
-		<link
-			href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
-			rel="stylesheet"
-		/>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule=""
+			src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"
+		></script>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -22,18 +26,19 @@
 
 					<div class="social-container">
 						<a href="https://github.com/xmatheus" target="_blank"
-							><i class="icon ion-logo-github"></i
+							><ion-icon name="logo-github"></ion-icon
 						></a>
 						<a
 							href="https://www.instagram.com/matheus.ftc/"
 							target="_blank"
-							><i class="icon ion-logo-instagram"></i
-						></a>
+							><ion-icon name="logo-instagram"></ion-icon>
+						</a>
 						<a
 							href="https://www.youtube.com/channel/UCjVHBIAz4TdmVK2rjI8qIbw?view_as=subscriber"
 							target="_blank"
-							><i class="icon ion-logo-youtube"></i
-						></a>
+						>
+							<ion-icon name="logo-youtube"></ion-icon>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -54,28 +59,31 @@
 				<div class="social-container-info">
 					<a href="https://github.com/xmatheus" target="_blank">
 						<span>Github</span>
-						<i class="icon ion-logo-github"></i>
+						<ion-icon name="logo-github"></ion-icon>
 					</a>
 					<a
 						href="https://www.instagram.com/matheus.ftc/"
 						target="_blank"
 					>
 						<span>Instagram</span>
-						<i class="icon ion-logo-instagram"></i
-					></a>
+						<ion-icon name="logo-instagram"></ion-icon>
+					</a>
 					<a
 						href="https://www.youtube.com/channel/UCjVHBIAz4TdmVK2rjI8qIbw?view_as=subscriber"
 						target="_blank"
 					>
 						<span>Youtube</span>
-						<i class="icon ion-logo-youtube"></i
-					></a>
+						<ion-icon name="logo-youtube"></ion-icon>
+					</a>
 				</div>
 			</div>
 			<div class="parallax__group project">
 				<div class="containerCards">
 					<div class="card">
-						<img src="img/test/1.png" alt="" />
+						<div>
+							<ion-icon name="logo-react"></ion-icon>
+						</div>
+						<img src="img/backgroundImages/1.png" alt="" />
 						<section id="section-animation">
 							<h2>UM TITLE</h2>
 							<p>
@@ -93,7 +101,7 @@
 					</div>
 
 					<div class="card">
-						<img src="/img/test/2.png" alt="" />
+						<img src="/img/backgroundImages/2.png" alt="" />
 						<section>
 							<h2>UM TITLE</h2>
 							<p>
@@ -111,7 +119,7 @@
 					</div>
 
 					<div class="card">
-						<img src="/img/test/3.png" alt="" />
+						<img src="/img/backgroundImages/3.png" alt="" />
 						<section>
 							<h2>UM TITLE</h2>
 							<p>
@@ -128,7 +136,7 @@
 						</section>
 					</div>
 					<div class="card">
-						<img src="img/test/1.png" alt="" />
+						<img src="img/backgroundImages/1.png" alt="" />
 						<section id="section-animation">
 							<h2>UM TITLE</h2>
 							<p>
@@ -146,7 +154,7 @@
 					</div>
 
 					<div class="card">
-						<img src="/img/test/2.png" alt="" />
+						<img src="/img/backgroundImages/2.png" alt="" />
 						<section>
 							<h2>UM TITLE</h2>
 							<p>
@@ -164,7 +172,7 @@
 					</div>
 
 					<div class="card">
-						<img src="/img/test/3.png" alt="" />
+						<img src="/img/backgroundImages/3.png" alt="" />
 						<section>
 							<h2>UM TITLE</h2>
 							<p>
@@ -183,6 +191,6 @@
 				</div>
 			</div>
 		</div>
-		<script src="index.js"></script>
+		<script src="scripts/index.js"></script>
 	</body>
 </html>

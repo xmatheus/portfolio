@@ -57,3 +57,18 @@ let intervalColors = setInterval(() => {
 		setTimeout(() => clearInterval(intervalColors), 500);
 	}
 }, 100);
+
+const getRepos = async (user) => {
+	const result = await fetch(
+		`https://api.github.com/users/${user}/repos?sort=created`
+	);
+	let jsonResult = await result.json();
+
+	jsonResult.map((elem) => {
+		let { full_name } = elem;
+		console.log(full_name);
+	});
+	// console.log(jsonResult);
+};
+
+getRepos("xmatheus");
