@@ -232,6 +232,8 @@ p:nth-of-type(7) {
 .containerCards .card {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	position: relative;
 }
 
@@ -250,6 +252,7 @@ p:nth-of-type(7) {
 
 .containerCards .card section {
 	transition: display 0.4s ease-in-out;
+	position: relative;
 }
 
 .containerCards .card img:hover {
@@ -287,7 +290,7 @@ p:nth-of-type(7) {
 	transform: translate(-50%, 0%);
 	top: 91%;
 	left: 50%;
-	background: #e42804;
+	background: #f77f00;
 	filter: saturate(1.5);
 	/* border-top: none; */
 	border-top-right-radius: 16px;
@@ -371,120 +374,94 @@ p:nth-of-type(7) {
 	}
 }
 
-@media (min-width: 830px) {
-	.containerCards .card img:hover + section {
-		height: 80%;
-		opacity: 1;
-	}
-	.containerCards .card img:hover + section::before,
-	section h2 {
-		height: 40%;
-		font-size: 15px;
-	}
+.containerCards .card:hover {
+	cursor: pointer;
 }
 
-@media (min-width: 1126px) {
-	.sky,
-	.mountain,
-	.floor,
-	.hero-text {
-		background-size: contain;
-	}
+.skills__group {
+	position: relative;
+	display: inline-block;
+	flex-direction: column;
+	height: 100%;
+	width: 100vw;
+	transform-style: preserve-3d;
+	/* overflow-y: hidden; */
 }
 
-@media (max-width: 1310px) {
-	.project {
-		height: 140vh;
-	}
+#textSkill {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background-color: transparent;
+	margin-top: 50px;
+	transition: all 0.4s ease-in-out;
 }
 
-@media (max-width: 881px) {
-	.containerCards {
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		grid-template-rows: minmax(100px, auto);
-		grid-row-gap: 170px;
-	}
-	.project {
-		height: 145vh;
-	}
+#textSkill h2 {
+	font-size: 3em;
+	background-color: #fff;
+	text-align: center;
+	color: #000;
+	font-weight: bold;
+	letter-spacing: 2px;
+	padding: 3px 30px;
+	border-radius: 5px;
+	transition: all 0.3s ease-in-out;
 }
 
-@media (max-width: 829px) {
-	.containerCards .card section p {
-		font-size: 0.6em;
-		font-weight: 500;
-	}
+.containerSkills {
+	display: grid;
+	max-width: 100%;
+	position: relative;
+	grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+	grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+	margin: 40px;
+	grid-column-gap: 60px;
+	grid-row-gap: 70px;
+	/* grid-gap: 50px; */
+	grid-auto-flow: dense;
+	/* padding-top: 50px; */
 }
 
-@media (max-width: 829px) {
-	.containerCards {
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		grid-template-rows: minmax(100px, auto);
-		grid-row-gap: 100px;
-	}
-	.card {
-		margin: 100px 0px;
-	}
-	.project {
-		height: 250vh;
-	}
-
-	.containerCards .card section {
-		height: 90%;
-		opacity: 1;
-	}
-	.containerCards .card section::before,
-	section h2 {
-		height: 40%;
-		font-size: 15px;
-	}
-
-	.containerCards .card section::before {
-		top: -120%;
-	}
-
-	.containerCards .card section h2 {
-		top: -105%;
-	}
+.skill {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	border-radius: 8px;
+	transition: all 0.5s ease-in-out;
+	z-index: 102;
+	/* height: 100%; */
 }
 
-@media (max-width: 768px) {
-	.social-container-info {
-		width: 90%;
-	}
-	.social-container-info span {
-		font-size: 14px;
-		padding: 5px;
-		letter-spacing: 1.5px;
-		font-weight: 400;
-		color: #fff;
-	}
-
-	.social-container-info a {
-		margin-left: 10px;
-		margin-right: 10px;
-	}
-
-	.social-container-info ion-icon {
-		font-size: 1.5rem;
-	}
+.skill:hover {
+	cursor: pointer;
+	background-color: #fff;
+	color: #000000;
+	border-radius: 7px;
 }
 
-@media (max-width: 740px) {
-	.containerCards .card section p {
-		font-size: 0.8em;
-		padding: 10px 30px;
-	}
+.skill ion-icon {
+	width: 70%;
+	height: 100px;
 }
 
-@media (max-width: 738px) {
-	.project {
-		height: 320vh;
-	}
+.skill h2 {
+	text-align: center;
+	height: 100px;
+	width: 70%;
+	font-size: 5.3em;
+	user-select: none;
 }
 
-@media (max-width: 490px) {
-	.containerCards .card section p {
-		font-size: 0.6em;
-	}
+.skill h3 {
+	text-align: center;
+	letter-spacing: 1.5px;
+	color: #fca311;
+	font-weight: bold;
+	font-size: 1.4em;
+	text-transform: uppercase;
+	margin-top: 30px;
 }

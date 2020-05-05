@@ -46,29 +46,89 @@ function getAverageRGB(imgEl) {
 	return rgb;
 }
 
-let intervalColors = setInterval(() => {
-	let img = document.querySelectorAll(".card img");
-
-	if (img) {
-		img.forEach((elem) => {
-			let { r, g, b } = getAverageRGB(elem);
-			elem.nextElementSibling.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-		});
-		setTimeout(() => clearInterval(intervalColors), 500);
+let myrequestJson = async (url) => {
+	try {
+		const result = await fetch(url);
+		let jsonResult = await result.json();
+		return jsonResult;
+	} catch (error) {
+		return null;
 	}
-}, 100);
-
+};
 const getRepos = async (user) => {
-	const result = await fetch(
+	let jsonResult = await myrequestJson(
 		`https://api.github.com/users/${user}/repos?sort=created`
 	);
-	let jsonResult = await result.json();
-
 	jsonResult.map((elem) => {
 		let { full_name } = elem;
-		console.log(full_name);
+		let repJson = null;
+		setTimeout(async () => {
+			try {
+				repJson = await myrequestJson(
+					`https://raw.githubusercontent.com/xmatheus/${
+						full_name.split("/")[1]
+					}/master/portifolio.json`
+				);
+				if (repJson) {
+					let { name, icon, resume } = repJson;
+
+					let a = document.querySelector(".containerCards");
+					let card = document.createElement("div");
+					card.className = "card";
+					let cardT = document.createElement("div");
+					cardT.className = "card";
+
+					card.innerHTML += `<div>
+							<ion-icon name="logo-${icon}"></ion-icon>
+						</div>
+						<img src="img/backgroundImages/${
+							Math.floor(Math.random() * 38) + 1
+						}.png" alt="" />
+						<section id="section-animation">
+							<h2>${name}</h2>
+							<p>
+								${resume}
+							</p>
+						</section>`;
+
+					cardT.innerHTML += `<div>
+							<ion-icon name="logo-${icon}"></ion-icon>
+						</div>
+						<img src="img/backgroundImages/${
+							Math.floor(Math.random() * 38) + 1
+						}.png" alt="" />
+						<section id="section-animation">
+							<h2>${name}</h2>
+							<p>
+								${resume}
+							</p>
+						</section>`;
+					a.appendChild(card);
+					a.appendChild(cardT);
+				}
+			} catch (err) {
+				console.log("Err");
+			}
+		}, 300);
 	});
-	// console.log(jsonResult);
+
+	setTimeout(() => {
+		setbackColors();
+	}, jsonResult.length * 305); //qtd de repositorios * 305ms(setTimeout pra colocar as imagens e infos dos repositorios)
 };
 
-getRepos("xmatheus");
+setbackColors = () => {
+	let intervalColors = setInterval(() => {
+		let img = document.querySelectorAll(".card img");
+
+		if (img) {
+			img.forEach((elem) => {
+				let { r, g, b } = getAverageRGB(elem);
+				elem.nextElementSibling.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+			});
+			setTimeout(() => clearInterval(intervalColors), 500);
+		}
+	}, 50);
+};
+
+// getRepos("xmatheus");
