@@ -128,6 +128,14 @@ a {
 	margin-bottom: 2.5rem;
 	border-radius: 50%;
 	filter: saturate(0.65);
+	user-select: none;
+}
+
+.info-container label {
+	font-weight: 400;
+	font-size: 0.8rem;
+	color: #fca311;
+	height: 30px;
 }
 
 .info-container h2,
@@ -155,6 +163,13 @@ p:nth-of-type(7) {
 	margin: 1rem 2.5rem;
 	color: aqua;
 }
+p:nth-of-type(8) {
+	font-weight: 400;
+	font-size: 0.8rem;
+	color: #fff;
+	margin: 3rem px;
+}
+
 .text-container {
 	position: relative;
 }
@@ -245,7 +260,7 @@ p:nth-of-type(7) {
 	width: 100%;
 	max-height: 200px;
 	object-fit: cover;
-	filter: blur(0.6px);
+	filter: blur(0.4px);
 	user-select: none;
 	position: relative;
 }
@@ -335,11 +350,9 @@ p:nth-of-type(7) {
 	background: rgb(0, 0, 0);
 	background: linear-gradient(
 		0deg,
-		rgba(0, 0, 0, 0.4738270308123249) 0%,
-		rgba(24, 24, 24, 0.2805497198879552) 42%,
-		rgba(25, 25, 25, 0.11528361344537819) 79%
+		rgba(0, 0, 0, 0.6558998599439776) 0%,
+		rgba(28, 25, 25, 0.7147233893557423) 79%
 	);
-
 	z-index: 3;
 }
 
@@ -458,7 +471,7 @@ p:nth-of-type(7) {
 
 .skill h3 {
 	text-align: center;
-	letter-spacing: 1.5px;
+	letter-spacing: 1.3px;
 	color: #fca311;
 	font-weight: bold;
 	font-size: 1.4em;

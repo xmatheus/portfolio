@@ -75,15 +75,13 @@ const getRepos = async (user) => {
 					let a = document.querySelector(".containerCards");
 					let card = document.createElement("div");
 					card.className = "card";
-					let cardT = document.createElement("div");
-					cardT.className = "card";
+					// let cardT = document.createElement("div");
+					// cardT.className = "card";
 
 					card.innerHTML += `<div>
-							<ion-icon name="logo-${icon}"></ion-icon>
+							<ion-icon name="${icon}"></ion-icon>
 						</div>
-						<img src="img/backgroundImages/${
-							Math.floor(Math.random() * 38) + 1
-						}.png" alt="" />
+						<img src="https://picsum.photos/400/400" alt="" />
 						<section id="section-animation">
 							<h2>${name}</h2>
 							<p>
@@ -91,18 +89,16 @@ const getRepos = async (user) => {
 							</p>
 						</section>`;
 
-					cardT.innerHTML += `<div>
-							<ion-icon name="logo-${icon}"></ion-icon>
-						</div>
-						<img src="img/backgroundImages/${
-							Math.floor(Math.random() * 38) + 1
-						}.png" alt="" />
-						<section id="section-animation">
-							<h2>${name}</h2>
-							<p>
-								${resume}
-							</p>
-						</section>`;
+					// cardT.innerHTML += `<div>
+					// 		<ion-icon name="logo-${icon}"></ion-icon>
+					// 	</div>
+					// 	<img src="https://source.unsplash.com/random" alt="" />
+					// 	<section id="section-animation">
+					// 		<h2>${name}</h2>
+					// 		<p>
+					// 			${resume}
+					// 		</p>
+					// 	</section>`;
 					a.appendChild(card);
 					a.appendChild(cardT);
 				}
@@ -131,4 +127,4 @@ setbackColors = () => {
 	}, 50);
 };
 
-// getRepos("xmatheus");
+getRepos("xmatheus");
