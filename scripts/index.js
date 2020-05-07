@@ -60,7 +60,7 @@ const getRepos = async (user) => {
 		`https://api.github.com/users/${user}/repos?sort=created`
 	);
 	jsonResult.map((elem) => {
-		let { full_name } = elem;
+		let { full_name, svn_url } = elem;
 		let repJson = null;
 		setTimeout(async () => {
 			try {
@@ -75,6 +75,11 @@ const getRepos = async (user) => {
 					let a = document.querySelector(".containerCards");
 					let card = document.createElement("div");
 					card.className = "card";
+
+					card.addEventListener("click", () => {
+						let win = window.open(svn_url, "_blank");
+						win.focus();
+					});
 
 					card.innerHTML += `<div>
 							<ion-icon name="${icon}"></ion-icon>
@@ -103,17 +108,10 @@ const getRepos = async (user) => {
 setbackColors = () => {
 	let intervalColors = setInterval(() => {
 		let img = document.querySelectorAll(".card img");
-		console.log(img);
 		if (img) {
 			img.forEach((elem) => {
 				let { r, g, b } = getAverageRGB(elem);
 				elem.nextElementSibling.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-				console.log(
-					r,
-					g,
-					b,
-					elem.nextElementSibling.style.backgroundColor
-				);
 			});
 			setTimeout(() => clearInterval(intervalColors), 500);
 		}
@@ -121,3 +119,5 @@ setbackColors = () => {
 };
 
 getRepos("xmatheus");
+
+$("html, body").animate({ scrollTop: 0 }, "slow");

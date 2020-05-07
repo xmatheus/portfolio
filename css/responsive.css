@@ -20,6 +20,9 @@
 }
 
 @media (max-width: 1310px) {
+	.wrapper {
+		perspective: 900px;
+	}
 	.project {
 		height: 140vh;
 	}
@@ -87,6 +90,25 @@
 }
 
 @media (max-width: 768px) {
+	.hero-text #ahref-container {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		left: 1%;
+		bottom: 5%;
+		font-size: 0.8em;
+	}
+
+	.hero-text #ahref-container a {
+		padding: 5px 10px;
+	}
+
+	.containerCards .card:last-child section {
+		margin-bottom: 30px;
+	}
+
 	.social-container-info {
 		width: 90%;
 	}
@@ -117,7 +139,7 @@
 @media (max-width: 738px) {
 	.project {
 		margin-top: 450px;
-		height: 330vh;
+		height: 100%;
 	}
 }
 
@@ -127,7 +149,7 @@
 	}
 
 	#textSkill h2 {
-		font-size: 2.5em;
+		font-size: 2em;
 		background-color: #fff;
 		text-align: center;
 		color: #000;

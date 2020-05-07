@@ -42,7 +42,9 @@ a {
 	height: 100vh;
 	overflow-x: hidden;
 	overflow-y: auto;
-	perspective: 400px;
+	perspective: 600px;
+	scroll-behavior: smooth;
+	transition: all 0.4s ease-in-out;
 }
 
 .parallax__group {
@@ -92,6 +94,33 @@ a {
 	background-size: cover;
 	transform: translateZ(0) scale(1);
 	z-index: 7;
+}
+
+.hero-text #ahref-container {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	left: 1%;
+	bottom: 2%;
+}
+
+.hero-text #ahref-container a {
+	padding: 5px 20px;
+	margin: 0px auto;
+	/* background-color: #fff; */
+	border-bottom: 0.7px solid #fff;
+	color: #fff;
+	letter-spacing: 2px;
+	font-weight: bold;
+	border-radius: 3px;
+	transition: all 0.4s ease-in-out;
+}
+
+.hero-text #ahref-container a:hover {
+	background-color: #fff;
+	color: #000;
 }
 
 .hero-text h2 {
@@ -222,12 +251,12 @@ p:nth-of-type(8) {
 .project {
 	display: flex;
 	flex-direction: column;
-	background: rgb(134, 75, 17);
+	/* background: rgb(134, 75, 17);
 	background: linear-gradient(
 		0deg,
 		rgba(134, 75, 17, 1) 0%,
 		rgba(251, 145, 39, 0) 79%
-	);
+	); */
 }
 
 .containerCards {
