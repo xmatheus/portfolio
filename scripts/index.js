@@ -69,6 +69,7 @@ const getRepos = async (user) => {
 						full_name.split("/")[1]
 					}/master/portifolio.json`
 				);
+				console.log(full_name, repJson);
 				if (repJson) {
 					let { name, icon, resume } = repJson;
 
@@ -102,7 +103,7 @@ const getRepos = async (user) => {
 
 	setTimeout(() => {
 		setbackColors();
-	}, jsonResult.length * 302); //qtd de repositorios * 305ms(setTimeout pra colocar as imagens e infos dos repositorios)
+	}, jsonResult.length * 100); //qtd de repositorios * 305ms(setTimeout pra colocar as imagens e infos dos repositorios)
 };
 
 setbackColors = () => {
@@ -119,5 +120,3 @@ setbackColors = () => {
 };
 
 getRepos("xmatheus");
-
-$("html, body").animate({ scrollTop: 0 }, "slow");
