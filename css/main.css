@@ -271,6 +271,7 @@ p:nth-of-type(8) {
 	/* grid-gap: 50px; */
 	grid-auto-flow: dense;
 	padding-top: 50px;
+	padding-bottom: 160px;
 }
 
 .containerCards .card {
@@ -387,6 +388,11 @@ p:nth-of-type(8) {
 
 .containerCards .card div ion-icon {
 	font-size: 5.2em;
+	transition: all 0.4s ease-in-out;
+}
+
+.containerCards .card div:hover > ion-icon {
+	font-size: 5.9em;
 }
 
 @media (min-width: 760px) {

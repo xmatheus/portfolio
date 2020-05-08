@@ -1,5 +1,62 @@
-{
-	"name": "Portifólio",
-	"icon": "logo-html5",
-	"resume": "Este é o meu portifólio, foi feito com HTML, CSS e Javascript. O objetivo com ele é permitir uma visualização mais bonita e intuitiva sobre meus projetos/conhecimentos."
-}
+[
+	{
+		"name": "Portifólio",
+		"icon": "logo-html5",
+		"resume": "Este é o meu portifólio, foi feito com HTML, CSS e Javascript. O objetivo com ele é permitir uma visualização mais bonita e intuitiva sobre meus projetos/conhecimentos.",
+		"github": "https://github.com/xmatheus/portifolio-vanilla"
+	},
+	{
+		"name": "twitter most favorites",
+		"icon": "logo-twitter",
+		"resume": "Aplicação que permite ver em quais contas determinado usuário deu mais likes/favorite. O backend foi feito com node, e o frontend com React e Materialize.",
+		"github": "https://github.com/xmatheus/twitter-mostFavorites"
+	},
+	{
+		"name": "Projeto digital do MuHNA",
+		"icon": "logo-react",
+		"resume": "Um sistema que eu desenvolvi para o museu de história natural do Araguaia(MuHNA), foi um projeto de extensão muito interessante, nele foi feito uma api(node), site(react) e aplicativo android(react-native)",
+		"github": "https://github.com/xmatheus/Muhna-siteDeGenreciamentoDaApi-Reactjs"
+	},
+	{
+		"name": "Instagram search direct",
+		"icon": "logo-javascript",
+		"resume": "Extensão para o Chrome que permite a busca de palavras no direct do Instagram. Ela pode buscar uma ou várias palavras, e em uma quantidade de conversas; a saída são alguns csvs contendo a data e user que enviou a mensagem.",
+		"github": "https://github.com/xmatheus/instagram-direct-search"
+	},
+	{
+		"name": "Servidor proxy",
+		"icon": "logo-python",
+		"resume": "Proxy feito para a disciplina de redes de computadores, foi usado python. O padrão é bloquear apenas requisições http, mais precisamente o site araguaia.ufmt.br.",
+		"github": "https://github.com/xmatheus/Faculdade/tree/master/Redes_de_computadores/Proxy"
+	},
+	{
+		"name": "App android(kivy)",
+		"icon": "logo-python",
+		"resume": "Aplicativo android feito com python usando o framework KIVY. O apliactivo possui dois jogos: memória e quiz. Os jogos são voltados para o museu e seus visitantes, então o quiz e o jogo da memória são sobre a fauna do cerrado.",
+		"github": "https://github.com/xmatheus/MuhnaApp-KIVY"
+	},
+	{
+		"name": "Site sort numbers",
+		"icon": "logo-react",
+		"resume": "O propósito com este site é estudar sobre SEO e adsense. Por quê um site tão simples? dei preferência para um site pequeno e simples, onde a pessoa apenas colasse os números, aperta-se no botão, e em seguida seus números estão organizados.",
+		"github": "https://github.com/xmatheus/sortNumbers"
+	},
+	{
+		"name": "Otakuzera",
+		"icon": "logo-android",
+		"resume": "Aplicativo android que exibe animes recentes do site animeshouse.net. O próprio app faz webscrapping do site e exibe de maneira estruturada. <br/>Uma função sendo implementada é a notificação quando um anime é lançado, pra isso o app vai rodar em segundo plano e vai fazer webscrapping a cada 30 minutos.",
+		"github": "https://github.com/xmatheus/otakuzera"
+	},
+	{
+		"name": "Python opencv",
+		"icon": "videocam-outline",
+		"resume": "Algoritmo feito em python usando opencv, o propósito é deixar o algoritmo rodando em um app android e notificar no telegram quando uma pessoa passar na frente da câmera.",
+		"github": "https://github.com/xmatheus/pyton-opencv-peopleDetect"
+	},
+	{
+		"name": "Calculadora de freela",
+		"icon": "calculator-outline",
+		"resume": "O site fornece uma calculadora de preço a ser cobrado em projetos, pensando em freelancers. Foi um desafio lançado pela He4rt Developers.",
+		"github": "https://github.com/xmatheus/he4rtlabs-challenges-01"
+	}
+]

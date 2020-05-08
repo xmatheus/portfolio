@@ -48,7 +48,7 @@
 
 @media (max-width: 859px) {
 	.project {
-		margin-top: 200px;
+		margin-top: 300px;
 	}
 }
 
@@ -138,7 +138,7 @@
 
 @media (max-width: 738px) {
 	.project {
-		margin-top: 450px;
+		margin-top: 750px;
 		height: 100%;
 	}
 }

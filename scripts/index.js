@@ -55,34 +55,23 @@ let myrequestJson = async (url) => {
 		return null;
 	}
 };
+
 const getRepos = async (user) => {
-	let jsonResult = await myrequestJson(
-		`https://api.github.com/users/${user}/repos?sort=created`
-	);
-	jsonResult.map((elem) => {
-		let { full_name, svn_url } = elem;
-		let repJson = null;
-		setTimeout(async () => {
-			try {
-				repJson = await myrequestJson(
-					`https://raw.githubusercontent.com/xmatheus/${
-						full_name.split("/")[1]
-					}/master/portifolio.json`
-				);
-				console.log(full_name, repJson);
-				if (repJson) {
-					let { name, icon, resume } = repJson;
+	let result = await myrequestJson("portifolio.json");
 
-					let a = document.querySelector(".containerCards");
-					let card = document.createElement("div");
-					card.className = "card";
+	result.map((elem) => {
+		let { name, icon, resume, github } = elem;
 
-					card.addEventListener("click", () => {
-						let win = window.open(svn_url, "_blank");
-						win.focus();
-					});
+		let a = document.querySelector(".containerCards");
+		let card = document.createElement("div");
+		card.className = "card";
 
-					card.innerHTML += `<div>
+		card.addEventListener("click", () => {
+			let win = window.open(github, "_blank");
+			win.focus();
+		});
+
+		card.innerHTML += `<div>
 							<ion-icon name="${icon}"></ion-icon>
 						</div>
 						<img src="/img/backgroundImages/${Math.floor(Math.random() * 38)}.png" alt="" />
@@ -93,30 +82,22 @@ const getRepos = async (user) => {
 							</p>
 						</section>`;
 
-					a.appendChild(card);
-				}
-			} catch (err) {
-				console.log("Err");
-			}
-		}, 300);
+		a.appendChild(card);
 	});
-
 	setTimeout(() => {
 		setbackColors();
-	}, jsonResult.length * 100); //qtd de repositorios * 305ms(setTimeout pra colocar as imagens e infos dos repositorios)
+	}, result.length * 300);
 };
 
 setbackColors = () => {
-	let intervalColors = setInterval(() => {
-		let img = document.querySelectorAll(".card img");
-		if (img) {
-			img.forEach((elem) => {
-				let { r, g, b } = getAverageRGB(elem);
-				elem.nextElementSibling.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-			});
-			setTimeout(() => clearInterval(intervalColors), 500);
-		}
-	}, 50);
+	let img = document.querySelectorAll(".card img");
+	if (img) {
+		img.forEach((elem) => {
+			let { r, g, b } = getAverageRGB(elem);
+			elem.nextElementSibling.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+		});
+		setTimeout(() => clearInterval(intervalColors), 500);
+	}
 };
 
 getRepos("xmatheus");
