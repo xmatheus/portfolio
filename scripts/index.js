@@ -74,7 +74,7 @@ const getRepos = async (user) => {
 		card.innerHTML += `<div>
 							<ion-icon name="${icon}"></ion-icon>
 						</div>
-						<img src="/img/backgroundImages/${Math.floor(Math.random() * 38)}.png" alt="" />
+						<img src="/img/${Math.floor(Math.random() * 38)}.png" alt="" />
 						<section id="section-animation">
 							<h2>${name}</h2>
 							<p>
@@ -96,7 +96,6 @@ setbackColors = () => {
 			let { r, g, b } = getAverageRGB(elem);
 			elem.nextElementSibling.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 		});
-		setTimeout(() => clearInterval(intervalColors), 500);
 	}
 };
 
