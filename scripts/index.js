@@ -74,7 +74,7 @@ const getRepos = async (user) => {
 		card.innerHTML += `<div>
 							<ion-icon name="${icon}"></ion-icon>
 						</div>
-						<img src="./img/${Math.floor(Math.random() * 38)}.png" alt="" />
+						<img src="/portifolio/img/${Math.floor(Math.random() * 38)}.png" alt="" />
 						<section id="section-animation">
 							<h2>${name}</h2>
 							<p>
