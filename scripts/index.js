@@ -71,22 +71,49 @@ const getRepos = async (user) => {
 			win.focus();
 		});
 
-		card.innerHTML += `<div>
-							<ion-icon name="${icon}"></ion-icon>
-						</div>
-						<img src="/portifolio/img/${Math.floor(Math.random() * 37) + 1}.webp" alt="" />
-						<section id="section-animation">
-							<h2>${name}</h2>
-							<p>
-								${resume}
-							</p>
-						</section>`;
+		let img = document.createElement("img");
+		img.src = `/portifolio/img/${Math.floor(Math.random() * 37) + 1}.webp`;
+		img.alt = "background image";
+
+		// card.innerHTML += `<div>
+		// 					<ion-icon name="${icon}"></ion-icon>
+		// 				</div>
+		// 				${img.innerHTML}
+		// 				<section id="section-animation" style="background-color: rgb(${r}, ${g}, ${b})">
+		// 					<h2>${name}</h2>
+		// 					<p>
+		// 						${resume}
+		// 					</p>
+		// 				</section>`;
+
+		let div = document.createElement("div");
+		let ionicon = document.createElement("ion-icon");
+		ionicon.name = icon;
+		div.appendChild(ionicon);
+
+		let mysection = document.createElement("section");
+		mysection.id = "section-animation";
+
+		let myh2 = document.createElement("h2");
+		myh2.innerText = name;
+
+		let myp = document.createElement("p");
+		myp.innerText = resume;
+
+		mysection.appendChild(myh2);
+		mysection.appendChild(myp);
+
+		card.appendChild(div);
+		card.appendChild(img);
+		card.appendChild(mysection);
 
 		a.appendChild(card);
+
+		setTimeout(() => {
+			let { r, g, b } = getAverageRGB(img);
+			mysection.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+		}, 300);
 	});
-	setTimeout(() => {
-		setbackColors();
-	}, result.length * 300);
 };
 
 setbackColors = () => {
