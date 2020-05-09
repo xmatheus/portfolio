@@ -137,6 +137,9 @@
 }
 
 @media (max-width: 738px) {
+	.wrapper {
+		perspective: 300px;
+	}
 	.project {
 		margin-top: 750px;
 		height: 100%;
