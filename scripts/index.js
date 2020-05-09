@@ -112,7 +112,7 @@ const getRepos = async (user) => {
 		setTimeout(() => {
 			let { r, g, b } = getAverageRGB(img);
 			mysection.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-		}, 300);
+		}, 600);
 	});
 };
 
