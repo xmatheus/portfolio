@@ -32,7 +32,7 @@
 	{
 		"name": "App android(kivy)",
 		"icon": "logo-python",
-		"resume": "Aplicativo android feito com python usando o framework KIVY. O apliactivo possui dois jogos: memória e quiz. Os jogos são voltados para o museu e seus visitantes, então o quiz e o jogo da memória são sobre a fauna do cerrado.",
+		"resume": "Aplicativo android feito com python usando o framework KIVY. O aplicativo possui dois jogos: memória e quiz. Os jogos são voltados para o museu e seus visitantes, então o quiz e o jogo da memória são sobre a fauna do cerrado.",
 		"github": "https://github.com/xmatheus/MuhnaApp-KIVY"
 	},
 	{
@@ -44,7 +44,7 @@
 	{
 		"name": "Otakuzera",
 		"icon": "logo-android",
-		"resume": "Aplicativo android que exibe animes recentes do site animeshouse.net. O próprio app faz webscrapping do site e exibe de maneira estruturada. <br/>Uma função sendo implementada é a notificação quando um anime é lançado, pra isso o app vai rodar em segundo plano e vai fazer webscrapping a cada 30 minutos.",
+		"resume": "Aplicativo android que exibe animes recentes do site animeshouse.net. O próprio app faz webscrapping do site e exibe de maneira estruturada. Uma função sendo implementada é a notificação quando um anime é lançado, pra isso o app vai rodar em segundo plano e fazer webscrapping a cada 30 minutos.",
 		"github": "https://github.com/xmatheus/otakuzera"
 	},
 	{
