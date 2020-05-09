@@ -72,7 +72,7 @@ const getRepos = async (user) => {
 		});
 
 		let img = document.createElement("img");
-		img.src = `/img/${Math.floor(Math.random() * 37) + 1}.webp`;
+		img.src = `/portifolio/img/${Math.floor(Math.random() * 37) + 1}.webp`; //localhost -> remove /portifolio
 		img.alt = "background image";
 
 		// card.innerHTML += `<div>
