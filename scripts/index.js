@@ -72,7 +72,7 @@ const getRepos = async (user) => {
 		});
 
 		let img = document.createElement("img");
-		img.src = `/portifolio/img/${Math.floor(Math.random() * 37) + 1}.webp`;
+		img.src = `/img/${Math.floor(Math.random() * 37) + 1}.webp`;
 		img.alt = "background image";
 
 		// card.innerHTML += `<div>
@@ -112,7 +112,7 @@ const getRepos = async (user) => {
 		setTimeout(() => {
 			let { r, g, b } = getAverageRGB(img);
 			mysection.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-		}, 600);
+		}, 1000);
 	});
 };
 
