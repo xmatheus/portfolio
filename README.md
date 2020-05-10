@@ -1,4 +1,4 @@
-## Meu portifolio
+## Meu portfolio
 
 Olá, este site serve para informar sobre o que eu sei sobre programação.
 A princípio as informações mais detalhadas sobre os projetos irão ficar no READE.MD de cada repositrio.
@@ -17,4 +17,4 @@ Fiquei na dúvida nessa parte, quando eu coloquei imagens relacionadas(prints, s
 ![Screen Capture_select-area_20200509170620](https://user-images.githubusercontent.com/34286800/81484923-903c5e80-9217-11ea-8ab4-a75f30df4a3c.gif)
 
 
-https://xmatheus.github.io/portifolio
+https://xmatheus.github.io/portfolio
