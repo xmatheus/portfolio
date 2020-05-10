@@ -1,9 +1,9 @@
 [
 	{
-		"name": "Portifólio",
+		"name": "Portfólio",
 		"icon": "logo-html5",
-		"resume": "Este é o meu portifólio, foi feito com HTML, CSS e Javascript. O objetivo com ele é permitir uma visualização mais bonita e intuitiva sobre meus projetos/conhecimentos.",
-		"github": "https://github.com/xmatheus/portifolio-vanilla"
+		"resume": "Este é o meu portfólio, foi feito com HTML, CSS e Javascript. O objetivo com ele é permitir uma visualização mais bonita e intuitiva sobre meus projetos/conhecimentos.",
+		"github": "https://github.com/xmatheus/portfolio"
 	},
 	{
 		"name": "twitter most favorites",
