@@ -72,7 +72,7 @@ const getRepos = async (user) => {
 		});
 
 		let img = document.createElement("img");
-		img.src = `/portfolio/img/${Math.floor(Math.random() * 37) + 1}.webp`; //localhost -> remove /portifolio
+		img.src = `img/${Math.floor(Math.random() * 37) + 1}.webp`; //localhost -> remove /portifolio
 		img.alt = "background image";
 
 		// card.innerHTML += `<div>
@@ -103,19 +103,33 @@ const getRepos = async (user) => {
 		mysection.appendChild(myh2);
 		mysection.appendChild(myp);
 
+		img.addEventListener("load", () => {
+			setTimeout(() => {
+				let { r, g, b } = getAverageRGB(img);
+				mysection.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+				console.log(img, "complete");
+			}, 1000);
+		});
+
 		card.appendChild(div);
 		card.appendChild(img);
 		card.appendChild(mysection);
 
 		a.appendChild(card);
 
-		setTimeout(() => {
-			let { r, g, b } = getAverageRGB(img);
-			mysection.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-		}, 1000);
+		// setTimeout(() => {
+		// 	let { r, g, b } = getAverageRGB(img);
+		// 	mysection.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+		// }, 1000);
 	});
 };
-
+// document.addEventListener(
+// 	"DOMContentLoaded",
+// 	function () {
+// 		setbackColors();
+// 	},
+// 	true
+// );
 setbackColors = () => {
 	let img = document.querySelectorAll(".card img");
 	if (img) {
