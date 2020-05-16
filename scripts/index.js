@@ -107,7 +107,7 @@ const getRepos = async (user) => {
 			setTimeout(() => {
 				let { r, g, b } = getAverageRGB(img);
 				mysection.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-				console.log(img, "complete");
+				// console.log(img, "complete");
 			}, 1000);
 		});
 
