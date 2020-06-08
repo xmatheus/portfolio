@@ -75,17 +75,6 @@ const getRepos = async (user) => {
 		img.src = `img/${Math.floor(Math.random() * 37) + 1}.webp`; //localhost -> remove /portifolio
 		img.alt = "background image";
 
-		// card.innerHTML += `<div>
-		// 					<ion-icon name="${icon}"></ion-icon>
-		// 				</div>
-		// 				${img.innerHTML}
-		// 				<section id="section-animation" style="background-color: rgb(${r}, ${g}, ${b})">
-		// 					<h2>${name}</h2>
-		// 					<p>
-		// 						${resume}
-		// 					</p>
-		// 				</section>`;
-
 		let div = document.createElement("div");
 		let ionicon = document.createElement("ion-icon");
 		ionicon.name = icon;
@@ -116,28 +105,17 @@ const getRepos = async (user) => {
 		card.appendChild(mysection);
 
 		a.appendChild(card);
-
-		// setTimeout(() => {
-		// 	let { r, g, b } = getAverageRGB(img);
-		// 	mysection.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-		// }, 1000);
 	});
 };
-// document.addEventListener(
-// 	"DOMContentLoaded",
-// 	function () {
-// 		setbackColors();
-// 	},
-// 	true
-// );
-setbackColors = () => {
-	let img = document.querySelectorAll(".card img");
-	if (img) {
-		img.forEach((elem) => {
-			let { r, g, b } = getAverageRGB(elem);
-			elem.nextElementSibling.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-		});
-	}
-};
+
+// setbackColors = () => {
+// 	let img = document.querySelectorAll(".card img");
+// 	if (img) {
+// 		img.forEach((elem) => {
+// 			let { r, g, b } = getAverageRGB(elem);
+// 			elem.nextElementSibling.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+// 		});
+// 	}
+// };
 
 getRepos("xmatheus");

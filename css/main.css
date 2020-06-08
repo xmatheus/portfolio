@@ -357,7 +357,7 @@ p:nth-of-type(8) {
 
 .containerCards .card section p {
 	font-weight: 200;
-	text-align: justify;
+	text-align: center;
 	color: #fff;
 	font-size: 0.7em;
 	padding: 0px 10px;
