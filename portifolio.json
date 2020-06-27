@@ -1,5 +1,23 @@
 [
 	{
+		"name": "Animação de PULL-UP",
+		"icon": "logo-css3",
+		"resume": "Animação feita com apenas CSS de um sticker fazendo barra fixa. É absurdo o quanto o CSS é incrível, e como bom curioso: eu gosto de fazer essas animações para estudar.",
+		"github": "https://github.com/xmatheus/css-calisthenics-men"
+	},
+	{
+		"name": "Pedra, papel e tesoura",
+		"icon": "game-controller-outline",
+		"resume": "Criei esse projeto para poder estudar socket.io, nele foi desenvolvido o jogo 'pedra, papel e tesoura' com salas dinâmicas de no máximo 2 jogadores",
+		"github": "https://github.com/xmatheus/pedra-papel-tesoura-socket.io"
+	},
+	{
+		"name": "Coronavírus mapa SVG",
+		"icon": "map-outline",
+		"resume": "Um site simples que fornece informações do Coronavírus por estados do Brasil. Apenas clicando no estado ele já mostra os dados de mortes, casos e suspeitos.",
+		"github": "https://github.com/xmatheus/mapa-Brasil-svg-coronavirus"
+	},
+	{
 		"name": "Portfólio",
 		"icon": "logo-html5",
 		"resume": "Este é o meu portfólio, foi feito com HTML, CSS e Javascript. O objetivo com ele é permitir uma visualização mais bonita e intuitiva sobre meus projetos/conhecimentos.",
