@@ -1,3 +1,7 @@
+Obs.: Estou para construir outro. Esse está muito 'cru' e com uma UI sem seguir padrões tipográficos, cores, espaços em brancos...
+Entre por sua conta e risco(brincadeira, ta usável)
+
+
 ## Meu portfolio
 
 Olá, este site serve para informar sobre o que eu sei sobre programação.
